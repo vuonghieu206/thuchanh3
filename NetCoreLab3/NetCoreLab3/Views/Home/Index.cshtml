@@ -1,0 +1,81 @@
+﻿@model List<NetCoreLab3.Models.Product>
+<div class="container">
+
+    <div class="menu">
+        <div class="logo">
+            DEMO LAB
+        </div>
+
+        <a href="/">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Liên hệ</a>
+        <a href="#">Sản phẩm</a>
+    </div>
+
+    <div class="main">  
+
+        <div class="left">
+
+            @await Html.PartialAsync("_CategoryPartial")
+
+            <img class="banner" src="/images/banner.jpg" />
+
+        </div>
+
+        <div class="right">
+
+            <h3>Sản phẩm mới nhất</h3>
+
+            <div class="product-list">
+
+                @foreach (var item in Model)
+                {
+                    <div class="product">
+
+                        <img src="@item.Image" />
+
+                        <div class="product-name">
+                            @item.Name
+                        </div>
+
+                        <div class="price">
+                            @item.Price.ToString("N0") VNĐ
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+
+            <div class="hot-product">
+
+                @await Component.InvokeAsync("HotProduct")
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="footer">
+    <div>
+        <h3>GIỚI THIỆU</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Debitis ab suscipit deserunt mollitia reiciendis, nobis iure
+            aliquam velit et laboriosam ducimus veritatis corporis est,
+            dolores aperiam! Officia impedit provident laboriosam.
+        </p>
+    </div>
+
+    <div>
+        <h3>LIÊN HỆ</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Odit amet suscipit quasi quisquam impedit magni molestias.
+            Dolores, aliquid commodi ut esse eos voluptatem nisi facilis
+            dolorem, repudiandae culpa ea quidem.
+        </p>
+    </div>
+</footer>

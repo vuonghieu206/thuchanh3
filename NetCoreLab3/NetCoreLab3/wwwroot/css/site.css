@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+/* KHUNG CHÍNH */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+/* THANH MENU */
+.menu {
+    height: 42px;
+    background: #292929;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 18px;
+    font-size: 13px;
+}
+
+    .menu a:hover {
+        background: #444;
+    }
+
+
+/* PHẦN CHÍNH */
+.main {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+
+/* CỘT TRÁI */
+.left {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+
+/* DANH MỤC */
+.category {
+    border: 1px solid #ddd;
+}
+
+.category-title {
+    background: #337ab7;
+    color: white;
+    padding: 9px;
+    font-weight: bold;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+
+    .category li:hover {
+        background: #eee;
+    }
+
+
+/* BANNER */
+.banner {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+
+/* CỘT PHẢI */
+.right {
+    flex: 1;
+    min-width: 0;
+}
+
+
+    /* TIÊU ĐỀ */
+    .right h3 {
+        background: #337ab7;
+        color: white;
+        margin: 0 0 10px 0;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+
+/* DANH SÁCH SẢN PHẨM */
+.product-list {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* SẢN PHẨM */
+.product {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+    min-width: 0;
+}
+
+    .product img {
+        display: block;
+        width: 100%;
+        height: 170px;
+        object-fit: contain;
+    }
+
+.product-name {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 40px;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+/* SẢN PHẨM NỔI BẬT */
+.hot-product {
+    margin-top: 18px;
+    border: none;
+    padding: 0;
+}
+
+    .hot-product .product-list {
+        display: flex;
+        gap: 12px;
+    }
+
+    .hot-product .product {
+        flex: 1;
+    }
+
+.hot-title {
+    background: #337ab7;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* FOOTER */
+.footer {
+    margin-top: 25px;
+    background: #333;
+    color: white;
+    display: flex;
+    gap: 100px;
+    padding: 18px 10px;
+    min-height: 100px;
+}
+
+    .footer div {
+        flex: 1;
+    }
+
+    .footer h3 {
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .footer p {
+        margin: 0;
+        color: white;
+        font-size: 11px;
+        line-height: 1.5;
+    }

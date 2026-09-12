@@ -1,0 +1,26 @@
+﻿@model List<NetCoreLab3.Models.Product>
+
+<div class="hot-title">
+    Sản phẩm nổi bật
+</div>
+
+<div class="product-list">
+
+    @foreach (var item in Model)
+    {
+        <div class="product">
+
+            <img src="@item.Image" />
+
+            <div class="product-name">
+                @item.Name
+            </div>
+
+            <div class="price">
+                @item.Price.ToString("N0") VNĐ
+            </div>
+
+        </div>
+    }
+
+</div>
